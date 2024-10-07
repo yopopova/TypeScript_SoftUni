@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "rootDir": "./src", // we read from
+    "outDir": "./dist", // we write to
+    "module": "CommonJS",
+    "sourceMap": true,
+    "lib": [
+      "es2017",
+      "es2017.object",
+      "dom",
+    ],
+  }
+}
