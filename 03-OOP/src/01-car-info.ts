@@ -57,3 +57,14 @@ class Car {
         this._horsepower = value;
     }
 }
+
+function carInfo(line: string): void {
+    const [ brand, model, carHorsepower ] = line.split(' ');
+    const horsepower = Number(carHorsepower);
+
+    const newCar = new Car(brand, model, horsepower);
+    console.log(`The car is: ${newCar.brand} ${newCar.model} - ${newCar.horsepower} HP.`);
+}
+
+carInfo("Chevrolet Impala 390");
+carInfo("Skoda Karoq 150");
