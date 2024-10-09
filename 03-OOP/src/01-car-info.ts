@@ -9,5 +9,21 @@ class Car {
         this._horsepower = horsepower;
     }
 
+    get brand(): string {
+        return this._brand;
+    }
+
+    set brand(value: string) {
+        if (typeof value !== 'string') {
+            throw new Error('Brand must be string!');
+        }
+
+        if (value.length === 0) {
+            throw new Error('Brand must be a non-empty string!');
+        }
+      
+        this._brand = value;
+    }
+
     
 }
