@@ -41,5 +41,19 @@ class Car {
         this._model = value;
     }
 
-    
+    get horsepower(): number {
+        return this._horsepower;
+    }
+
+    set horsepower(value: number) {
+        if (typeof value !== 'number') {
+            throw new Error('Horsepower must be number!');
+        }
+
+        if (value < 0) {
+            throw new Error('Horsepower must be positive number!');
+        }
+
+        this._horsepower = value;
+    }
 }
