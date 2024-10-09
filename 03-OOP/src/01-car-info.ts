@@ -25,5 +25,21 @@ class Car {
         this._brand = value;
     }
 
+    get model(): string {
+        return this._model;
+    }
+
+    set model(value: string) {
+        if (typeof value !== 'string') {
+            throw new Error('Model must be string!');
+        }
+
+        if (value.length === 0) {
+            throw new Error('Model must be a non-empty string!');
+        }
+
+        this._model = value;
+    }
+
     
 }
