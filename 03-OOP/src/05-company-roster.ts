@@ -62,6 +62,23 @@ function companyRoster(arr: string[]): void {
     
     // console.log(departments);
     
+    let highestAvgSalary = 0;
+    let highestAvgSalaryDepartment = '';
+
+    for (const department in departments) {
+        const departmentEmployees = departments[department]; // Array of objects.        
+
+        const departmentTotalSalary = departmentEmployees.reduce((sum, employee) => sum + employee.salary, 0); // Finding the total salary for every department.
+        
+        const averageSalary = departmentTotalSalary / departmentEmployees.length; // Finding the average salary for every department.
+        
+
+        if (averageSalary > highestAvgSalary) {
+            highestAvgSalary = averageSalary;
+            highestAvgSalaryDepartment = department;
+        }
+    }
+
     
 }
 
