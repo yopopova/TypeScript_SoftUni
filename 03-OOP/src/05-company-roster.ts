@@ -50,6 +50,18 @@ function companyRoster(arr: string[]): void {
 
     // console.log(employees);
 
+    const departments: { [key: string]: Employee[] } = {};
+
+    employees.forEach(employee => {
+        if (!departments[employee.department]) {
+            departments[employee.department] = [];
+        }
+
+        departments[employee.department].push(employee);
+    });
+    
+    // console.log(departments);
+    
     
 }
 
