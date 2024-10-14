@@ -79,6 +79,9 @@ function companyRoster(arr: string[]): void {
         }
     }
 
+    const sortedEmployees = departments[highestAvgSalaryDepartment].sort((a, b) => b.salary - a.salary);
+    // console.log(sortedEmployees);
+    
     
 }
 
