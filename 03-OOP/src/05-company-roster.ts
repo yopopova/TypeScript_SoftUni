@@ -82,7 +82,11 @@ function companyRoster(arr: string[]): void {
     const sortedEmployees = departments[highestAvgSalaryDepartment].sort((a, b) => b.salary - a.salary);
     // console.log(sortedEmployees);
     
-    
+    console.log(`Highest Average Salary: ${highestAvgSalaryDepartment}`);
+
+    sortedEmployees.forEach(employee => {
+        console.log(`${employee.name} ${employee.salary.toFixed(2)} ${employee.email} ${employee.age}`);
+    });
 }
 
 companyRoster([
