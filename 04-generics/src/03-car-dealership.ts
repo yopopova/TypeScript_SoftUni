@@ -22,6 +22,12 @@ class CarDealer<T> implements Dealership<T>, Actions<T> {
         this.modelsSold = modelsSold;
     }
 
+    sellCar(dealerId: T, model: T): T {
+        this.modelsSold[dealerId as unknown as string] = model; // Transform 'dealerId' into string.
+        this.soldCars += 1;
+        return dealerId;
+    }
+
     
 }
 
