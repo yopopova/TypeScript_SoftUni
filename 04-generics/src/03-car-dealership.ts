@@ -28,7 +28,13 @@ class CarDealer<T> implements Dealership<T>, Actions<T> {
         return dealerId;
     }
 
-    
+    showDetails(): void {
+        console.log(`${this.dealershipName}:`);
+
+        for (const [key, value] of Object.entries(this.modelsSold)) {
+            console.log(`${key} sold ${value}`);
+        }
+    }
 }
 
 let dealership = new CarDealer('SilverStar');
