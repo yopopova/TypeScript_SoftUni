@@ -38,7 +38,21 @@ class PersonalAccount<T, U> extends CreateAccount<T, U> {
         }
     }
 
+    showDetails(): string {
+        let expensesTotalAmount = 0;
+
+        for (const expense in this.recentTransactions) {
+          expensesTotalAmount += this.recentTransactions[expense];
+        }
     
+        return `
+        Bank name: ${this.bankName}
+        Bank ID: ${this.bankId}
+        Owner name: ${this.ownerName}
+        Money: ${this.money}
+        Money spent: ${expensesTotalAmount}
+        `;
+    }
 }
 
 let account = new PersonalAccount('DSK', 101240, 'Ivan Ivanov');
