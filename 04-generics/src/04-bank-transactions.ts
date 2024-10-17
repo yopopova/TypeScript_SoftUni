@@ -18,6 +18,10 @@ class PersonalAccount<T, U> extends CreateAccount<T, U> {
         this.ownerName = ownerName;
     }
 
+    deposit(amount: number): number {
+        return this.money += amount;
+    }
+
     
 }
 
