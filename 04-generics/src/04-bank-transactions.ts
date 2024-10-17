@@ -22,6 +22,22 @@ class PersonalAccount<T, U> extends CreateAccount<T, U> {
         return this.money += amount;
     }
 
+    expense(amount: number, expenseType: string) {
+        if (this.money >= 0) {
+            if (!(expenseType in this.recentTransactions)) {
+                this.recentTransactions[expenseType] = amount;
+                this.money -= amount;
+            } else {
+                this.recentTransactions[expenseType] += amount;
+                this.money -= amount;
+            }
+
+        } else {
+            const error = `You cant make ${expenseType} transaction`;
+            throw new Error(error);
+        }
+    }
+
     
 }
 
