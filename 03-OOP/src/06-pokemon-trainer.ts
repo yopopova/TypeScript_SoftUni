@@ -77,6 +77,8 @@ function pokemonTrainer(infoArr: string[]): void {
         // because we want to get only the pokemons which still have health and record the new array to the trainer's pokemon collection.
     }
 
+    const sortedTrainers = Object.values(trainers).sort((a, b) => b.badgesNumber - a.badgesNumber);
+
     
 }
 
