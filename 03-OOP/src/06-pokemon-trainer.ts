@@ -79,7 +79,9 @@ function pokemonTrainer(infoArr: string[]): void {
 
     const sortedTrainers = Object.values(trainers).sort((a, b) => b.badgesNumber - a.badgesNumber);
 
-    
+    sortedTrainers.forEach(trainer => {
+        console.log(`${trainer.name} ${trainer.badgesNumber} ${trainer.pokemonCollection.length}`);
+    });
 }
 
 pokemonTrainer(
