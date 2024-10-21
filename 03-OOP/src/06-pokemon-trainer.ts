@@ -51,6 +51,26 @@ function pokemonTrainer(infoArr: string[]): void {
         command = infoArr[index];
     }
     
+    index++;
+    command = infoArr[index];
+
+    while (command !== 'End') {
+        for (const line in trainers) {
+            let pokemons = trainers[line].pokemonCollection;
+
+            if (pokemons.some(x => x.element === command)) {
+                trainers[line].increaceBadges();
+            } else {
+                pokemons.forEach(item => {
+                    item.reduceHealth();
+                });
+            }
+        }
+
+        index++;
+        command = infoArr[index];
+    }
+
     
 }
 
