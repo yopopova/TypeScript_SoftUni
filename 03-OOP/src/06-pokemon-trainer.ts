@@ -71,6 +71,12 @@ function pokemonTrainer(infoArr: string[]): void {
         command = infoArr[index];
     }
 
+    for (const line in trainers) {
+        trainers[line].pokemonCollection = trainers[line].pokemonCollection.filter(p => p.health >= 0);
+        // Use .filter() with converted logic ('p.health >= 0' instead of 'p.health <= 0'),
+        // because we want to get only the pokemons which still have health and record the new array to the trainer's pokemon collection.
+    }
+
     
 }
 
