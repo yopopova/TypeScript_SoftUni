@@ -19,6 +19,13 @@ class BankAccount {
         return this.balance * BankAccount.interestRate * years;
     }
 
-    
+    public deposit(amount: number): void {
+        this.balance += amount;
+        console.log(`Deposited ${amount} to ID${this.id}`);
+    }
+
+    public getId(): number {
+        return this.id;
+    }
 }
 
