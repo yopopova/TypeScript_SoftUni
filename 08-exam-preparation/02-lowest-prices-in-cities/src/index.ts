@@ -22,4 +22,26 @@ type ProductTownPriceMap = {
   [product: string]: TownPriceMap;
 };
 
+const generateProductTownPriceMap = (input: string[]): ProductTownPriceMap => {
+  const result: ProductTownPriceMap = {};
+
+  for (const line of input) {
+    const [town, product, price] = line.split(" | ");
+    const parsedPrice = Number(price);
+
+    if (!result[product]) {
+      result[product] = {};
+    }
+
+    if (!result[product][town]) {
+      result[product][town] = parsedPrice;
+    } else {
+      if (result[product][town] > parsedPrice) {
+        result[product][town] = parsedPrice;
+      }
+    }
+  }
+
+  return result;
+};
 
