@@ -58,3 +58,9 @@ const printResult = (result: ProductTownPriceMap): void => {
   }
 };
 
+function solve(input: string[]): void {
+  const result = generateProductTownPriceMap(input);
+  printResult(result);
+}
+
+solve(inputCollection);
