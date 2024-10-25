@@ -45,3 +45,16 @@ const generateProductTownPriceMap = (input: string[]): ProductTownPriceMap => {
   return result;
 };
 
+const printResult = (result: ProductTownPriceMap): void => {
+  const tuples = Object.entries(result);
+
+  for (const [product, townPriceMap] of tuples) {
+    const townPricesTuple = Object.entries(townPriceMap);
+    const sorted = townPricesTuple.sort((a, b) => a[1] - b[1]);
+    const [town, price] = sorted[0];
+
+    // Sample Product -> 1000 (Sample Town)
+    console.log(`${product} -> ${price} (${town})`);
+  }
+};
+
