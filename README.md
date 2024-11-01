@@ -18,3 +18,5 @@ The 'TypeScript' course focuses on learning one of the most popular languages â€
 
 To start working with TypeScript, you first need to check if you have it installed on your computer with the ```tsc -v``` command on your terminal. If you don't see any TypeScript version on your terminal, you need to run the ```npm install -g typescript``` command to install it globally.
 
+Once you have TypeScript installed, you need to run the ```tsc --init``` command to generate a ```tsconfig.json``` file and set it up as it is in the task folders.
+
