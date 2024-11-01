@@ -26,3 +26,6 @@ Please keep in mind that if you want to use the materials from ```07-workshop```
 
 If the terminal starts throwing you array method errors, just change the VS Code terminal from ```PowerShell``` to ```Command Prompt```.
 
+## Certificate
+
+![TypeScript - October 2024 - Certificate](https://github.com/user-attachments/assets/23072604-2aba-47be-bba2-efe6e3c1dda5)
