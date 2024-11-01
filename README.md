@@ -20,3 +20,5 @@ To start working with TypeScript, you first need to check if you have it install
 
 Once you have TypeScript installed, you need to run the ```tsc --init``` command to generate a ```tsconfig.json``` file and set it up as it is in the task folders.
 
+After you write your TypeScript code, you need to run the ```tsc yourFileName.ts``` command to transpile it to JavaScript code. If you want ot run your JavaScript code, you should run the ```node yourFileName.js``` command.
+
