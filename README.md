@@ -14,11 +14,13 @@ The 'TypeScript' course focuses on learning one of the most popular languages â€
 - Working with modules and decorators
 - Building complete applications with TypeScript
 
-## Note
+## Notes
 
 To start working with TypeScript, you first need to check if you have it installed on your computer with the ```tsc -v``` command on your terminal. If you don't see any TypeScript version on your terminal, you need to run the ```npm install -g typescript``` command to install it globally.
 
 Once you have TypeScript installed, you need to run the ```tsc --init``` command to generate a ```tsconfig.json``` file and set it up as it is in the task folders.
 
 After you write your TypeScript code, you need to run the ```tsc yourFileName.ts``` command to transpile it to JavaScript code. If you want ot run your JavaScript code, you should run the ```node yourFileName.js``` command.
+
+Please keep in mind that if you want to use the materials from ```07-workshop``` folder after downloading the repository, you should run the ```npm install``` command into your VS Code terminal to generate the ```node_modules``` folder.
 
