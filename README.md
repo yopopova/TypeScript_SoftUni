@@ -24,3 +24,5 @@ After you write your TypeScript code, you need to run the ```tsc yourFileName.ts
 
 Please keep in mind that if you want to use the materials from ```07-workshop``` folder after downloading the repository, you should run the ```npm install``` command into your VS Code terminal to generate the ```node_modules``` folder.
 
+If the terminal starts throwing you array method errors, just change the VS Code terminal from ```PowerShell``` to ```Command Prompt```.
+
