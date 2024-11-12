@@ -22,9 +22,11 @@ Once you have TypeScript installed, you need to run the ```tsc --init``` command
 
 After you write your TypeScript code, you need to run the ```tsc yourFileName.ts``` command to transpile it to JavaScript code. If you want ot run your JavaScript code, you should run the ```node yourFileName.js``` command.
 
-Please keep in mind that if you want to use the materials from ```07-workshop``` folder after downloading the repository, you should run the ```npm install``` command into your VS Code terminal to generate the ```node_modules``` folder.
-
 If the terminal starts throwing you array method errors, just change the VS Code terminal from ```PowerShell``` to ```Command Prompt```.
+
+To generate a ```dist``` folder you need to run the ```tsc``` command at the folder level.
+
+Please keep in mind that if you want to use the materials from ```07-workshop``` folder after downloading the repository, you should run the ```npm install``` command into your VS Code terminal to generate the ```node_modules``` folder.
 
 ## Certificate
 
